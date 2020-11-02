@@ -1,0 +1,335 @@
+/* @mkblvcreates */
+/* @romefortune */
+/* @mitch.js */
+/* © 2020 */
+
+
+
+/* Fonts ---------------------------------------------------------------*/
+@font-face {
+    font-family: futura;
+    src: url('../fonts/FuturaExtraBold.ttf');
+}
+
+@font-face {
+    font-family: coolvetica;
+    src: url('../fonts/coolvetica.ttf');
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url('../fonts/HelveticaNeue-Black.ttf');
+}
+
+html,
+body {
+    background-image: url("../images-music/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+body {
+    position: relative;
+}
+
+/* Box ---------------------------------------------------------------*/
+.dialogueBox .middle,
+div.notes,
+div.attribution,
+div.tags {
+    background-color: #eee3d4;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    width: auto;
+    height: auto;
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+.dialogueBox .middle,
+div.notes,
+div.attribution,
+div.tags {
+    background-repeat: repeat-y;
+    padding: 10px 10px 10px 10px;
+}
+
+#logo {
+    width: 30em;
+    padding: 0px 30px 0px 30px;
+}
+
+#back-logo {
+    width: 4em;
+    float: left;
+}
+
+#shape-1 {
+    bottom: -130px;
+    right: -25px;
+    width: 18em;
+    position: absolute;
+}
+
+.middle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    user-select: none;
+}
+
+h1 {
+    font-size: 1em;
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: futura;
+}
+
+#shop {
+    position: absolute;
+    transform: rotate(90deg);
+    top: 1.7em;
+    left: -5px;
+    z-index: 9999;
+}
+
+#shop a {
+    color: #036bbd;
+    font-size: 1.5em
+}
+
+#FREEkxxx {
+    position: absolute;
+    transform: rotate(-90deg);
+    top: 1.2em;
+    right: 5px;
+    z-index: 9999;
+}
+
+#FREEkxxx a {
+    color: #018c36;
+    font-size: 1.5em
+}
+
+#LA {
+    position: absolute;
+    bottom: 0;
+    transform: rotate(90deg);
+    z-index: 9999;
+    left: 16px;
+    bottom: 5px
+}
+
+#LA a {
+    color: #ec262e;
+    font-size: 1.5em
+}
+
+#NYC {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: rotate(-90deg);
+    z-index: 9999;
+    right: 7px;
+    bottom: 11px;
+}
+
+#NYC a {
+    color: #033974;
+    font-size: 1.5em;
+}
+
+.time {
+    padding-top: 1em;
+    padding-bottom: 5em;
+    color: black;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    font-family: futura;
+}
+
+#d {
+    color: #036bbd;
+}
+
+#h {
+    color: #018c36
+}
+
+#m {
+    color: #033974
+}
+
+#s {
+    color: #ec262e
+}
+
+.time span {
+    padding: 0 5px;
+    font-size: 0.5rem;
+}
+
+.time span div {
+    font-size: 3rem;
+}
+
+.label {
+    font-size: 2.2rem;
+    font-family: futura;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: black;
+}
+
+@media (max-width: 730px) {
+
+    h1 {
+        font-size: 0.7em;
+    }
+
+    .time span {
+        font-size: 0.5rem;
+    }
+
+    .time span div {
+        font-size: 3rem;
+    }
+
+    .label {
+        font-size: 2.2rem;
+    }
+
+    #logo {
+        width: 20em;
+        padding: 0px 30px 0px 30px;
+    }
+
+    #d {
+        font-size: 4.5em;
+    }
+
+    #h {
+        font-size: 4.5em;
+    }
+
+    #m {
+        font-size: 4.5em;
+    }
+
+    #s {
+        font-size: 4.5em;
+    }
+
+    #back-logo {
+        width: 2.5em;
+        float: left;
+    }
+
+    #shape-1 {
+        bottom: -110px;
+        right: -25px;
+        width: 15em;
+        position: absolute;
+    }
+
+    #shop a {
+        font-size: 1.7em
+    }
+
+    #FREEkxxx a {
+        font-size: 1.7em
+    }
+
+    #LA a {
+        font-size: 1.7em
+    }
+
+    #NYC a {
+        font-size: 1.7em;
+
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    h1 {
+        font-size: 0.7em;
+    }
+
+    .time span {
+        font-size: 0.5rem;
+    }
+
+    .time span div {
+        font-size: 3rem;
+    }
+
+    .time {
+        padding-bottom: 4em;
+    }
+
+    .label {
+        font-size: 2.2rem;
+    }
+
+    #logo {
+        width: 18em;
+        padding: 0px 30px 0px 30px;
+    }
+
+    #d {
+        font-size: 4.5em;
+    }
+
+    #h {
+        font-size: 4.5em;
+    }
+
+    #m {
+        font-size: 4.5em;
+    }
+
+    #s {
+        font-size: 4.5em;
+    }
+
+    #back-logo {
+        width: 2.5em;
+        float: left;
+    }
+
+    #shape-1 {
+        bottom: -110px;
+        right: -25px;
+        width: 14em;
+        position: absolute;
+    }
+
+    #shop a {
+        font-size: 1.7em
+    }
+
+    #FREEkxxx a {
+        font-size: 1.7em
+    }
+
+    #LA a {
+        font-size: 1.7em
+    }
+
+    #NYC a {
+        font-size: 1.7em;
+
+    }
+}

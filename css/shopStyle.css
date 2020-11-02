@@ -1,0 +1,1095 @@
+/* @mkblvcreates */
+/* @romefortune */
+/* @mitch.js */
+/* © 2020 */
+
+
+
+/* Fonts ---------------------------------------------------------------*/
+@font-face {
+    font-family: futura;
+    src: url('../fonts/FuturaExtraBold.ttf');
+}
+
+@font-face {
+    font-family: coolvetica;
+    src: url('../fonts/coolvetica.ttf');
+}
+
+@font-face {
+    font-family: Helvetica;
+    src: url('../fonts/HelveticaNeue-Black.ttf');
+}
+
+/* general ---------------------------------------------------------------*/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    background-image: url("../images-music/background.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+body {
+    position: relative;
+}
+
+/* Text ---------------------------------------------------------------*/
+h1 {
+    color: #036bbc;
+    font-family: futura;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+}
+
+h2 {
+    color: #018b36;
+    font-family: futura;
+    font-size: 1.3em;
+    padding-bottom: 0.5em;
+}
+
+p {
+    font-family: coolvetica;
+    padding-bottom: 0.8em;
+    font-size: 0.91em;
+    word-spacing: 2px;
+}
+
+
+
+#box-header2 {
+    display: none
+}
+
+#limited {
+    color: black;
+    font-family: futura;
+}
+
+#pre-order {
+    color: red;
+    font-family: futura;
+}
+
+/* Header ---------------------------------------------------------------*/
+header {
+    display: flex;
+    justify-content: center;
+}
+
+#logo-container {
+    padding-left: 13em;
+
+}
+
+#main-logo {
+    grid-column: 7/span 2;
+    width: 50em;
+}
+
+/* Audio Player ---------------------------------------------------------------*/
+.music-pause-button,
+.music-play-button {
+    cursor: pointer;
+}
+
+#music-cover {
+    width: 11em;
+    background-color: #eee3d4;
+    border-radius: 15px !important;
+    margin-top: 4.5em;
+    margin-left: 3em
+}
+
+#audioWrapper {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    opacity: 1;
+    width: 25px;
+    z-index: 1;
+}
+
+/* main ---------------------------------------------------------------*/
+.grid-12 {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box {
+    background-color: #eee3d4;
+    margin-bottom: 2em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+    max-width: 1250px;
+    height: auto;
+    border-radius: 15px !important;
+    overflow: hidden;
+}
+
+#left {
+    padding-left: 1.5em;
+    padding-top: 2em;
+    overflow: hidden;
+}
+
+#right {
+    padding-right: 1.5em;
+    padding-top: 2em;
+    overflow: hidden
+}
+
+#p-footer {
+    font-size: 0.9em;
+}
+
+#right-p-footer {
+    font-size: 0.9em;
+    display: none;
+}
+
+#p-instructions {
+    font-size: 1.05em;
+    color: #f9b914;
+    padding-top: 0.5em;
+    word-spacing: 3px;
+    text-align: center;
+    padding: 0.5em 0em 0.5em 0em
+}
+
+#c {
+    width: 620px;
+    height: 360px;
+    position: relative;
+    background-color: transparent
+}
+
+#shoe-container {
+    width: 620px;
+    height: 360px;
+    overflow: hidden;
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+    position: relative;
+}
+
+#yellow-container {
+    background: #f8b916;
+    border-radius: 15px;
+    height: 292px;
+    width: 500px;
+    float: right;
+    position: relative
+}
+
+#sizes {
+    position: absolute;
+    width: 30px;
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+#shop-container {
+    width: 280px;
+    margin: 0 auto;
+    position: relative;
+    top: 1em
+}
+
+#price {
+    text-align: center;
+    padding-top: 3.5em;
+    color: white;
+    font-family: futura;
+
+}
+
+#back-logo {
+    width: 5.5em;
+    padding-bottom: 0.8em;
+}
+
+#right-back-logo {
+    width: 8vmin;
+    padding-bottom: 0.8em;
+    display: none;
+}
+
+#instruction-container {
+    background-color: #033974;
+    width: 26em;
+    border-radius: 10px;
+    margin-bottom: 2em;
+    margin-right: 1em;
+    float: right;
+    position: relative
+}
+
+#shape-container {
+    position: relative;
+    bottom: -385px;
+    right: -368px;
+}
+
+#shape-1 {
+    width: 27em;
+    position: absolute;
+}
+
+#shape-container2 {
+    position: relative;
+    bottom: 110px;
+    right: -440px;
+}
+
+#shape-2 {
+    width: 16em;
+    position: absolute
+}
+
+#shape-3 {
+    width: 27em;
+    position: absolute;
+}
+
+#shape-container3 {
+    position: relative;
+    bottom: 120px;
+    right: -290px;
+    display: none;
+}
+
+#left-shape-container {
+    position: relative;
+    bottom: -370px;
+    right: -240px;
+    display: none;
+}
+
+#left-shape-container2 {
+    position: relative;
+    bottom: 130px;
+    right: -350px;
+    display: none;
+}
+
+/* Size Chart ---------------------------------------------------------------*/
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.modal-content {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+/* Loader ---------------------------------------------------------------*/
+
+#loading-screen {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    opacity: 1;
+    transition: 1s opacity;
+}
+
+#loading-screen.fade-out {
+    opacity: 0;
+    display: none;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 120px;
+    height: 120px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #018c36;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #033974;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #ec262e;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Responsive
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+    .box {
+        max-width: 1000px;
+    }
+
+    #instruction-container {
+        width: 20em;
+    }
+
+    #p-instructions {
+        font-size: 0.9em;
+    }
+
+    #yellow-container {
+        height: 252px;
+        width: 400px;
+        overflow: hidden;
+    }
+
+    #price {
+        padding-top: 2.9em;
+    }
+
+    #back-logo {
+        width: 4.3em
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    #p-footer {
+        font-size: 0.72em;
+        padding: 0;
+        padding-bottom: 1em
+    }
+
+    #shoe-container {
+        width: 500px;
+        height: 290px;
+        margin-left: 0em;
+        margin-top: 0.5em;
+    }
+
+    #c {
+        width: 500px;
+        height: 290px;
+        position: relative;
+        background-color: transparent
+    }
+
+    #shape-container {
+        bottom: -340px;
+        right: -230px;
+    }
+
+    #shape-1 {
+        width: 23em;
+    }
+
+    #shape-container2 {
+        bottom: 110px;
+        right: -320px;
+    }
+
+    #shape-container3 {
+        position: relative;
+        bottom: 120px;
+        right: -290px;
+        display: none;
+    }
+
+    #shape-2 {
+        width: 14em;
+    }
+
+    #left-shape-container2 {
+        bottom: 110px;
+        right: -320px;
+    }
+
+    #left-shape-container {
+        bottom: -340px;
+        right: -230px;
+    }
+
+    #music-cover {
+        width: 10em;
+        margin-top: 4.1em;
+    }
+
+    #logo-container {
+        padding-left: 12em;
+    }
+
+    #main-logo {
+        width: 45em;
+    }
+
+    #loading-screen {
+        width: 450px;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .box {
+        min-width: 730px;
+        max-width: 730px;
+        margin-left: 5.5em;
+        margin-right: 5.5em;
+    }
+
+    #left {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    #right {
+        padding-top: 1em !important;
+    }
+
+    #instruction-container {
+        width: 20em;
+        float: left;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    #p-instructions {
+        font-size: 0.9em;
+    }
+
+    #yellow-container {
+        height: 252px;
+        width: 400px;
+        overflow: hidden;
+        float: left;
+        margin: auto;
+        position: relative;
+        top: 15.5em
+    }
+
+    #price {
+        padding-top: 2.9em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        padding-bottom: 0.5em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+        padding-bottom: 0.5em;
+    }
+
+    p {
+        padding-bottom: 0.8em;
+        font-size: 0.9em;
+    }
+
+    #main-p {
+        width: 36em
+    }
+
+    #p-footer {
+        font-size: 0.7em;
+        display: none;
+    }
+
+    #back-logo {
+        display: none;
+    }
+
+    #shoe-container {
+        height: 280px;
+        width: 460px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        bottom: 18em;
+        padding-right: 12em
+    }
+
+    #loading-screen {
+        width: 30em
+    }
+
+    #c {
+        width: 460px;
+        height: 280px;
+        position: relative;
+    }
+
+    #shape-container {
+        bottom: -450px;
+        right: -410px;
+    }
+
+    #shape-1 {
+        width: 29em;
+    }
+
+    #shape-container2 {
+        bottom: 110px;
+        right: -320px;
+        display: none;
+    }
+
+    #shape-2 {
+        width: 18em;
+        position: absolute;
+    }
+
+    #shape-container3 {
+        position: relative;
+        bottom: 120px;
+        right: -290px;
+        display: block;
+    }
+
+    #left-shape-container2 {
+        bottom: 110px;
+        right: -510px;
+        display: flex
+    }
+
+    .grid-2 {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 1em
+    }
+
+    #right {
+        padding-left: 1.5em;
+        padding-top: 2em;
+        overflow: hidden
+    }
+
+    #right-back-logo {
+        width: 4.5em;
+        padding-bottom: 0.8em;
+        display: flex;
+    }
+
+    #right-p-footer {
+        font-size: 0.9em;
+        display: flex;
+    }
+
+    #music-cover {
+        width: 8em;
+        margin-top: 3.2em;
+        margin-left: 2em
+    }
+
+    #logo-container {
+        padding-left: 9em;
+    }
+
+    #main-logo {
+        width: 35em;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+    .box {
+        max-width: 470px;
+    }
+
+    #left {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    #right {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 1em !important;
+    }
+
+    #instruction-container {
+        width: 20em;
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 2em;
+    }
+
+    #p-instructions {
+        font-size: 0.9em;
+        text-align: center;
+        color: #f9b914;
+        padding-top: 0.5em;
+        word-spacing: 3px;
+    }
+
+    #main-p {
+        width: 27em
+    }
+
+    #yellow-container {
+        height: 252px;
+        width: 400px;
+        overflow: hidden;
+        float: none;
+        margin: auto;
+        top: 15em
+    }
+
+    #price {
+        padding-top: 2.9em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        padding-bottom: 0.5em;
+        position: relative
+    }
+
+    h2 {
+        font-size: 0.94em;
+        padding-bottom: 0.5em;
+        position: relative
+    }
+
+    p {
+        padding-bottom: 0.8em;
+        font-size: 0.8em;
+        position: relative
+    }
+
+    #p-footer {
+        font-size: 0.7em;
+        display: none;
+    }
+
+    #back-logo {
+        display: none;
+    }
+
+    #shoe-container {
+        height: 280px;
+        width: 460px;
+        margin: 0 auto;
+        position: relative;
+        bottom: 18em;
+        right: 18px;
+    }
+
+    #shape-container3 {
+        position: relative;
+        bottom: 120px;
+        right: -290px;
+        display: none
+    }
+
+    #c {
+        width: 460px;
+        height: 280px;
+    }
+
+    #shape-container {
+        bottom: -520px;
+        right: -255px;
+    }
+
+    #shape-1 {
+        width: 19.5em;
+    }
+
+    #shape-container2 {
+        display: none;
+    }
+
+    #shape-2 {
+        width: 13em;
+    }
+
+    #left-shape-container2 {
+        position: relative;
+        bottom: 90px;
+        right: -300px;
+        display: flex
+    }
+
+    .grid-2 {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 1em
+    }
+
+    #right-back-logo {
+        width: 4em;
+        padding-bottom: 0.8em;
+        display: flex;
+    }
+
+    #right-p-footer {
+        font-size: 0.55em;
+        display: flex;
+    }
+
+    #music-cover {
+        width: 6.7em;
+        margin: 0;
+    }
+
+    #audioWrapper {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    #logo-container {
+        padding-left: 0em;
+        padding-top: 5em;
+    }
+
+    #main-logo {
+        width: 29em;
+    }
+
+    #loading-screen {
+        width: 460px;
+        height: 280px;
+    }
+}
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .box {
+        max-width: 470px;
+        height: 100%;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    #left {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    #right {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-top: 1em !important;
+    }
+
+    #instruction-container {
+        width: 70vmin;
+        float: none;
+        margin: 0 auto;
+    }
+
+    #main-p {
+        width: 27em
+    }
+
+    #p-instructions {
+        font-size: 3vmin;
+    }
+
+    #yellow-container {
+        height: 252px;
+        width: 80vmin;
+        overflow: hidden;
+        float: none;
+        margin: auto;
+        top: 15em
+    }
+
+    #shop-container {
+        width: 56vmin;
+        margin: 0 auto;
+    }
+
+    #price {
+        padding-top: 2.9em;
+    }
+
+    #shoe-container {
+        width: 80vmin;
+        margin: 0 auto;
+        bottom: 15em;
+        height: 230px;
+    }
+
+    #c {
+        width: 80vmin;
+        height: 230px;
+    }
+
+    h1 {
+        color: #036bbc;
+        font-family: futura;
+        font-size: 5vmin;
+        padding-bottom: 0.5em;
+        position: relative
+    }
+
+    h2 {
+        font-size: 3vmin;
+        position: relative
+    }
+
+    p {
+        font-size: 2.8vmin;
+        position: relative
+    }
+
+    #p-footer {
+        font-size: 0.7em;
+        display: none;
+    }
+
+    #back-logo {
+        display: none;
+    }
+
+    #shape-container {
+        bottom: -510px;
+        right: -240px;
+        display: none;
+    }
+
+    #shape-1 {
+        width: 19em;
+    }
+
+    #shape-container2 {
+        display: none;
+    }
+
+    #shape-container3 {
+        position: relative;
+        bottom: 120px;
+        right: -290px;
+        display: none;
+    }
+
+    #shape-2 {
+        width: 13em;
+    }
+
+    #left-shape-container2 {
+        bottom: 110px;
+        right: -280px;
+        display: flex
+    }
+
+    .grid-2 {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 1em
+    }
+
+    #right-back-logo {
+        width: 13vmin;
+        display: flex;
+        padding-top: 3em
+    }
+
+    #right-p-footer {
+        font-size: 2.3vmin;
+        display: flex;
+    }
+
+    #logo-container {
+        padding-left: 0em;
+    }
+
+    #main-logo {
+        width: 95vmin;
+        padding-top: 4.5em
+    }
+
+    #loading-screen {
+        width: 90vmin;
+    }
+
+    #music-cover {
+        width: 20vmin;
+        margin: 0;
+
+    }
+
+    #audioWrapper {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 400px) {
+
+    #left-shape-container2 {
+        bottom: 110px;
+        right: -200px;
+        display: flex
+    }
+
+    #shape-2 {
+        width: 12em;
+    }
+
+}

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>FREEK SECRET SHOWS</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="FREEK AF1 Pre-order MKBLVCREATES ">
+    <meta name="description" content="Exclusive «FREEK FORCE» AF1 release in collaboration with Rome Fortune">
+
+    <link rel="stylesheet" type="text/css" href="css/indexStyle.css" />
+    <link rel="icon" type="image/png" sizes="64x64" href="images-music/K.png">
+
+    <script src="js/Three/three.min.js"></script>
+    <script src="js/Three/OrbitControls.js"></script>
+    <script src="js/Three/Vector2.js"></script>
+    <script src="js/Three/CSS3D.js"></script>
+
+</head>
+
+<body>
+
+    <div id="shop">
+        <h1><a href="shop.html">SHOP</a></h1>
+    </div>
+    <div id="FREEkxxx">
+        <h1><a href="">XXX</a></h1>
+    </div>
+    <div id="LA">
+        <h1><a href="https://www.songkick.com/concerts/39368718-rome-fortune-at-secret-cinema">LA</a></h1>
+    </div>
+    <div id="NYC">
+        <h1><a href="https://www.songkick.com/concerts/39370480-rome-fortune-at-secret-loft">NYC</a></h1>
+    </div>
+
+    <div class="dialogueBox photo" id="dialogueBox" style="position: absolute; left: 0px; top: 0px;">
+        <div class="middle">
+            <h1></h1>
+            <img id="logo" src="images-music/logo.png">
+            <h1>LA - MAR 26 | NYC - MAR 28</h1>
+            <div class="time">
+                <span>
+                    <div id="d">00</div>
+                    Days
+                </span>
+                <span>
+                    <div id="h">00</div>
+                    Hours
+                </span>
+                <span>
+                    <div id="m">00</div>
+                    Minutes
+                </span>
+                <span>
+                    <div id="s">00</div>
+                    Seconds
+                </span>
+            </div>
+            <img id="shape-1" src="images-music/green-dot.png">
+            <img id="back-logo" src="images-music/back-logo.png">
+        </div>
+    </div>
+
+    <script>
+        var camera, light, scene, renderer, rectangle, scene2, renderer2, div, controls;
+        var scene2, renderer2;
+        var counter = 0
+
+        document.body.addEventListener('touchstart', function(e) {
+            e.preventDefault();
+        });
+
+        init();
+
+        function init() {
+
+            // CountDown Clock
+            const comingdate = new Date("Mar 28, 2020 00:00:00");
+
+            const d = document.getElementById("d");
+            const h = document.getElementById("h");
+            const m = document.getElementById("m");
+            const s = document.getElementById("s");
+
+            let countdown = setInterval(() => {
+                const now = new Date();
+                const des = comingdate.getTime() - now.getTime();
+                const days = Math.floor(des / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((des % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const mins = Math.floor((des % (1000 * 60 * 60)) / (1000 * 60));
+                const secs = Math.floor((des % (1000 * 60)) / 1000);
+
+                d.innerHTML = getTrueNumber(days);
+                h.innerHTML = getTrueNumber(hours);
+                m.innerHTML = getTrueNumber(mins);
+                s.innerHTML = getTrueNumber(secs);
+
+                if (countdown <= 0) clearInterval(countdown);
+            }, 1000);
+
+            const getTrueNumber = x => (x < 10 ? "0" + x : x);
+
+            //camera
+            camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 10000);
+            camera.position.set(0, 0, 1000);
+
+            //controls
+            controls = new THREE.OrbitControls(camera);
+            controls.rotateSpeed = 0.2;
+            controls.zoomSpeed = 1.2;
+            controls.panSpeed = 0.8;
+
+            controls.minDistance = 1000;
+            controls.maxDistance = 1000;
+
+            controls.minPolarAngle = 1; // radians
+            controls.maxPolarAngle = 2; // radians
+
+            controls.minAzimuthAngle = -0.5; // radians
+            controls.maxAzimuthAngle = 0.5; // radians
+
+            //Scene
+            scene = new THREE.Scene();
+
+            light = new THREE.DirectionalLight(0xffffff);
+            light.position.set(-50, 200, 100);
+            light.castShadow = true;
+            light.shadow.camera.top = 180;
+            light.shadow.camera.bottom = -100;
+            light.shadow.camera.left = -120;
+            light.shadow.camera.right = 120;
+            scene.add(light);
+
+            //WebGL Renderer
+            renderer = new THREE.WebGLRenderer({
+                antialias: true,
+                alpha: true
+            });
+
+            //CSS3D Renderer
+            renderer2 = new THREE.CSS3DRenderer({
+                alpha: true
+            });
+
+            //CSS3D Scene
+            scene2 = new THREE.Scene();
+
+            var geometry = new THREE.BoxGeometry(10000, 100000, 10000);
+            var material = new THREE.MeshBasicMaterial({
+                color: 0xffff00,
+                side: THREE.DoubleSide
+            });
+
+            var plane = new THREE.Mesh(geometry, material);
+            scene2.add(plane);
+
+            //HTML
+            element = document.getElementById('dialogueBox');
+
+
+
+            // Add click listener as usual
+            element.addEventListener("click", function(event) {
+                console.log("I've been clicked!");
+                console.log(event);
+            });
+
+            //card
+            card = new THREE.CSS3DObject(element);
+            card.position.x = 0;
+            card.position.y = 0;
+            card.position.z = 0;
+            scene2.add(card);
+
+            
+
+            //-----------------------------------------------------
+            //Renderer
+            function resizeRendererToDisplaySize(renderer) {
+                canvas = renderer.domElement;
+                width = canvas.clientWidth;
+                height = canvas.clientHeight;
+                needResize = canvas.width !== width || canvas.height !== height;
+                if (needResize) {
+                    renderer.setSize(width, height, false);
+                }
+                return needResize;
+            }
+
+            function render() {
+                if (resizeRendererToDisplaySize(renderer)) {
+                    canvas = renderer.domElement;
+                    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                    camera.updateProjectionMatrix();
+                }
+                renderer.render(scene, camera);
+                renderer.setClearColor(0x000000, 1);
+                renderer2.setSize(window.innerWidth, window.innerHeight);
+                document.body.appendChild(renderer2.domElement);
+                renderer2.render(scene2, camera);
+                controls.update();
+                requestAnimationFrame(render);
+            }
+            requestAnimationFrame(render);
+            render()
+        }
+
+    </script>
+
+</body>
+
+
+
+</html>

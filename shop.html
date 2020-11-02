@@ -1,0 +1,408 @@
+<!-- @mkblvcreates -->
+<!-- @romefortune -->
+<!-- @mitch.js -->
+<!-- © 2020 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>FREEK AF1 PRE-ORDER</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="FREEK AF1 Pre-order MKBLVCREATES ">
+    <meta name="description" content="Exclusive «FREEK FORCE» AF1 release in collaboration with Rome Fortune">
+
+    <script src="js/Three/three.min.js"></script>
+    <script src="js/Three/loaderSupport.js"></script>
+    <script src="js/Three/OrbitControls.js"></script>
+    <script src="js/Three/Tween.js"></script>
+    <script src="js/Three/FBXLoader.js"></script>
+    <script src="js/Three/inflate.min.js"></script>
+
+    <link rel="icon" type="image/png" sizes="64x64" href="images-music/K.png">
+    <link rel="stylesheet" href="css/shopStyle.css">
+
+</head>
+
+<body>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="text/javascript" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://uploads-ssl.webflow.com/5bd767be1432197381b78040/js/webflow.75a51f957.js" type="text/javascript"></script>
+
+    <header>
+        <!-- Audio Player ======================================================== -->
+        <div id="audioWrapper">
+            <div class="audio w-embed">
+                <audio id="shop-music" loop="true" audio-handler>
+                    <source src="images-music/PHEROMONES.wav" type="audio/mp3">
+                </audio>
+            </div>
+
+            <div class="music-pause-button w-embed" data-ix="show-music-play-button" style="display: none; opacity: 1; transition: opacity 1000ms ease 0s;">
+                <a onclick="document.getElementById('shop-music').pause();">
+                    <img id="music-cover" src="images-music/FREEkasset%20PauseButton.png">
+                </a>
+            </div>
+
+            <div class="music-play-button w-embed" data-ix="show-music-pause-button" style="display: block; opacity: 1; transition: opacity 1000ms ease 0s;">
+                <a onclick="document.getElementById('shop-music').play();">
+                    <img id="music-cover" src="images-music/FREEkasset%20PlayButton.png">
+                </a>
+            </div>
+        </div>
+
+        <div id="logo-container">
+            <img id="main-logo" src="images-music/Nike-Logo.png" alt="">
+        </div>
+    </header>
+
+    <main>
+        <div class="grid-12">
+            <div class="box">
+                <div class="grid-2">
+
+                    <!-- Left side ======================================================== -->
+                    <div id="left">
+                        <div id="left-shape-container">
+                            <img id="shape-1" src="images-music/shape-1.png">
+                        </div>
+                        <div id="left-shape-container2">
+                            <img id="shape-2" src="images-music/shape-2.png">
+                        </div>
+                        <h1 id="box-header">A PAIR OF SHOES TO<br>KICK OFF YOUR LIBERATION!</h1>
+
+                        <p id="main-p">The exclusive «FREEK FORCE» AF1 release in collaboration with Rome Fortune of Freek Records
+                            embodies unbridled freedom alongside an effortless synthesis of street and style.
+                            This DIY-inspired, disco-funk and soul-Infused AF1 features felt,
+                            multicolor patchwork with a distinct, chenille Varsity peace sign patch.
+                            Across time, space and sound, the multichromatic «FREEK FORCE» AF1 personifies the unification of once disparate
+                            cultures; from indie to rap, traditional to postmodern and classical to futuristic. The radical form and
+                            traditional function of the «FREEK FORCE» AF1 will relate to many, but each will have their own reason for loving these
+                            one-of-a-kind kicks.</p>
+
+                        <h2>YOU CANT HAVE UNITY WITHOUT DIVERSITY.</h2>
+                        <p>«WE DIDNT WANT TO STYLIZE TO MUCH SO THAT WE STAYED<br> TRUE TO INDIVIDUALITY WITHIN KEEPING DIY TEXTURES,<br> INDEPENDENCE, FOUNDATIONAL PRIMARY COLORS, AND<br> COMPOSITION WITH THE DISCOLORED OLD SOLE, WE MADE<br> SURE TO KEEP YOUR WEAR IN MIND.» BLAKE EDWARDS</p>
+                        <h2 style="padding-bottom: 1em"><span style="color: #033974; font-size: 0.9em;">WILL THEY LOOK EVEN BETTER WHEN THEY GET DIRTY?</span><br><span style="color: #eb252d; font-size: 0.9em;">THERE'S ONLY ONE WAY TO FIND OUT.</span></h2>
+                        <img style="width: 17em; " src="images-music/blue-line.png">
+                        <h2 id="limited">LIMITED AVAILIBILITY <span id="pre-order">PRE-ORDER NOW</span></h2>
+                        <img id="back-logo" src="images-music/back-logo.png">
+                        <p id="p-footer">DESIGNED BY BLAKE EDWARDS IN COLLABORATION WITH MKBLV CREATES<br>
+                            + ROME FORTUNE OF FREEK RECORDS FOR NIKE<br>
+                            NARRATIVE BY ADAM ISAAC ITKOFF</p>
+                    </div>
+
+                    <!-- Right side ======================================================== -->
+                    <div id="right">
+                        <div id="shape-container2">
+                            <img id="shape-2" src="images-music/shape-2.png">
+                        </div>
+                        <div id="shape-container">
+                            <img id="shape-1" src="images-music/shape-1.png">
+                        </div>
+                        <div id="shape-container3">
+                            <img id="shape-3" src="images-music/nike-circle.png">
+                        </div>
+
+                        <div id="instruction-container">
+                            <p id="p-instructions">
+                                FOR BETTER VIEWS °<br>
+                                DESKTOP - CLICK AND DRAG<br>
+                                MOBILE - TOUCH AND SWIPE</p>
+                        </div>
+
+                        <div id="yellow-container">
+                            <img id="sizes" src="images-music/sizes1.png">
+                            <!-- The Modal -->
+                            <div id="myModal" class="modal">
+                                <span class="close">&times;</span>
+                                <img class="modal-content" id="img01">
+                            </div>
+                            <h3 id="price">$225 USD</h3>
+                            <div id="shop-container">
+
+                                <div id='product-component-1580936828176'></div>
+                                <script type="text/javascript">
+                                    /*<![CDATA[*/
+                                    (function() {
+                                        var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+                                        if (window.ShopifyBuy) {
+                                            if (window.ShopifyBuy.UI) {
+                                                ShopifyBuyInit();
+                                            } else {
+                                                loadScript();
+                                            }
+                                        } else {
+                                            loadScript();
+                                        }
+
+                                        function loadScript() {
+                                            var script = document.createElement('script');
+                                            script.async = true;
+                                            script.src = scriptURL;
+                                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+                                            script.onload = ShopifyBuyInit;
+                                        }
+
+                                        function ShopifyBuyInit() {
+                                            var client = ShopifyBuy.buildClient({
+                                                domain: 'freek-shop.myshopify.com',
+                                                storefrontAccessToken: 'a057a9e5d341786cfc10450ec75bb284',
+                                            });
+                                            ShopifyBuy.UI.onReady(client).then(function(ui) {
+                                                ui.createComponent('product', {
+                                                    id: '4532086571145',
+                                                    node: document.getElementById('product-component-1580936828176'),
+                                                    moneyFormat: '%24%7B%7Bamount%7D%7D',
+                                                    options: {
+                                                        "product": {
+                                                            "styles": {
+                                                                "product": {
+                                                                    "@media (min-width: 601px)": {
+                                                                        "max-width": "calc(25% - 20px)",
+                                                                        "margin-left": "20px",
+                                                                        "margin-bottom": "50px"
+                                                                    }
+                                                                },
+                                                                "button": {
+                                                                    "color": "#000000",
+                                                                    ":hover": {
+                                                                        "color": "#000000",
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "background-color": "#ffffff",
+                                                                    ":focus": {
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "border-radius": "11px",
+                                                                    "padding-left": "57px",
+                                                                    "padding-right": "57px"
+                                                                }
+                                                            },
+                                                            "contents": {
+                                                                "img": false,
+                                                                "title": false,
+                                                                "price": false
+                                                            },
+                                                            "text": {
+                                                                "button": "Add to cart"
+                                                            }
+                                                        },
+                                                        "productSet": {
+                                                            "styles": {
+                                                                "products": {
+                                                                    "@media (min-width: 601px)": {
+                                                                        "margin-left": "-20px"
+                                                                    }
+                                                                }
+                                                            }
+                                                        },
+                                                        "modalProduct": {
+                                                            "contents": {
+                                                                "img": false,
+                                                                "imgWithCarousel": true,
+                                                                "button": false,
+                                                                "buttonWithQuantity": true
+                                                            },
+                                                            "styles": {
+                                                                "product": {
+                                                                    "@media (min-width: 601px)": {
+                                                                        "max-width": "100%",
+                                                                        "margin-left": "0px",
+                                                                        "margin-bottom": "0px"
+                                                                    }
+                                                                },
+                                                                "button": {
+                                                                    "color": "#000000",
+                                                                    ":hover": {
+                                                                        "color": "#000000",
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "background-color": "#ffffff",
+                                                                    ":focus": {
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "border-radius": "11px",
+                                                                    "padding-left": "57px",
+                                                                    "padding-right": "57px"
+                                                                }
+                                                            },
+                                                            "text": {
+                                                                "button": "Add to cart"
+                                                            }
+                                                        },
+                                                        "cart": {
+                                                            "styles": {
+                                                                "button": {
+                                                                    "color": "#000000",
+                                                                    ":hover": {
+                                                                        "color": "#000000",
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "background-color": "#ffffff",
+                                                                    ":focus": {
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    "border-radius": "11px"
+                                                                },
+                                                                "title": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "header": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "lineItems": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "subtotalText": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "subtotal": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "notice": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "currency": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "close": {
+                                                                    "color": "#000000",
+                                                                    ":hover": {
+                                                                        "color": "#000000"
+                                                                    }
+                                                                },
+                                                                "empty": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "noteDescription": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "discountText": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "discountIcon": {
+                                                                    "fill": "#000000"
+                                                                },
+                                                                "discountAmount": {
+                                                                    "color": "#000000"
+                                                                }
+                                                            },
+                                                            "text": {
+                                                                "total": "Subtotal",
+                                                                "button": "Checkout"
+                                                            }
+                                                        },
+                                                        "toggle": {
+                                                            "styles": {
+                                                                "toggle": {
+                                                                    "background-color": "#ffffff",
+                                                                    ":hover": {
+                                                                        "background-color": "#e6e6e6"
+                                                                    },
+                                                                    ":focus": {
+                                                                        "background-color": "#e6e6e6"
+                                                                    }
+                                                                },
+                                                                "count": {
+                                                                    "color": "#000000",
+                                                                    ":hover": {
+                                                                        "color": "#000000"
+                                                                    }
+                                                                },
+                                                                "iconPath": {
+                                                                    "fill": "#000000"
+                                                                }
+                                                            }
+                                                        },
+                                                        "lineItem": {
+                                                            "styles": {
+                                                                "variantTitle": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "title": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "price": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "fullPrice": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "discount": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "discountIcon": {
+                                                                    "fill": "#000000"
+                                                                },
+                                                                "quantity": {
+                                                                    "color": "#000000"
+                                                                },
+                                                                "quantityIncrement": {
+                                                                    "color": "#000000",
+                                                                    "border-color": "#000000"
+                                                                },
+                                                                "quantityDecrement": {
+                                                                    "color": "#000000",
+                                                                    "border-color": "#000000"
+                                                                },
+                                                                "quantityInput": {
+                                                                    "color": "#000000",
+                                                                    "border-color": "#000000"
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                });
+                                            });
+                                        }
+                                    })();
+                                    /*]]>*/
+
+                                </script>
+                            </div>
+                        </div>
+
+                        <div id="shoe-container">
+                            <section id="loading-screen">
+                                <div id="loader"></div>
+                            </section>
+                            <canvas id="c"></canvas>
+                        </div>
+
+                        <img id="right-back-logo" src="images-music/back-logo.png">
+                        <p id="right-p-footer">DESIGNED BY BLAKE EDWARDS IN COLLABORATION WITH MKBLV CREATES<br>
+                            + ROME FORTUNE OF FREEK RECORDS FOR NIKE<br>
+                            NARRATIVE BY ADAM ISAAC ITKOFF</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/shop.js"></script>
+    <script>
+ 
+        var modal = document.getElementById("myModal");
+
+        var img = document.getElementById("sizes");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = "images-music/size-chart.jpg";
+        }
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
